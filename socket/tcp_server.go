@@ -9,7 +9,7 @@ import (
 
 func main() {
 	service := ":7777"
-	tcpAddr, err := net.ResolveTCPAddr("tcp4", service)
+	tcpAddr, err := net.ResolveTCPAddr("tcp", service)
 	checkErrror(err)
 	listener, err := net.ListenTCP("tcp", tcpAddr)
 	checkErrror(err)
